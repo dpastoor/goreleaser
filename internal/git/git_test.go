@@ -20,3 +20,10 @@ func TestGit(t *testing.T) {
 		err.Error(),
 	)
 }
+
+func TestClean(t *testing.T) {
+	out, err := Clean("asdasd 'ssadas'\nadasd", nil)
+	assert.NoError(t, err)
+	assert.Equal(t, "asdasd ssadas", out)
+
+}
